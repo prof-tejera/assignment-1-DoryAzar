@@ -17,10 +17,10 @@ function App() {
       <Router>
         <nav>
           <ul>
-            <li>
+            <li key={1}>
               <Link to="/">Timers</Link>
             </li>
-            <li>
+            <li key={2}>
               <Link to="/docs">Documentation</Link>
             </li>
           </ul>
