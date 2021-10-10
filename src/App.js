@@ -1,21 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import styled from "styled-components";
-
+import Container from "./components/generic/Container/Container";
 import DocumentationView from "./views/DocumentationView";
 import TimersView from "./views/TimersView";
 
-const Container = styled.div`
-  background: #f0f6fb;
-  height: 100vh;
-  overflow: auto;
-`;
 
 function App() {
   return (
     <Container>
       <Router>
-        <nav>
+      <nav>
           <ul>
             <li key={1}>
               <Link to="/">Timers</Link>
@@ -25,7 +19,8 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Switch>
+        <br />
+      <Switch>
           <Route path="/docs">
             <DocumentationView />
           </Route>

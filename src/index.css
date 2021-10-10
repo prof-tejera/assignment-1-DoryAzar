@@ -1,11 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/**
+ * Neumorphic Timer Stylesheet
+ * Inspired by the work of several libraries found online
+ * @author: Dory Azar
+ * @description: Neumorphism (Neo Skeumoprhism) style of UI
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root {
+
+    --primary: #ff2e54;
+    --tint: #FFFFFF;
+    --bgLight-1: #f2f2f7;
+    --bgLight-2: #e5e5ea;
+    --bgDark: #636366;
+    --textDark: #636366;
+    --textLight: #afafb2;
+
+    /* text sizes */
+    --xsmall_text: 0.5rem;
+    --small_text: 0.625rem;
+    --default_text: 1rem;
+    --medium_text: 1.6rem;
+    --large_text: 2.5rem;
+    --xlarge_text: 3rem;
+    --banner_text: 4rem;
 }
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-y: scroll;
+    background: var(--bgLight-1);
+}
+@media screen and (min-width: 900px) {
+    html {
+        font-size: 75%;
+    }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -17,4 +56,18 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+
+/* GENERIC CLASSES */
+
+.show {
+    position: absolute;
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+
+.hide {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
 }

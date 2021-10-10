@@ -1,28 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import Container from "../generic/Container/Container";
 
 const Wrapper = styled.div`
-  border: 1px solid #121212;
-  margin: 20px 0px;
-`;
-
-const Container = styled.div`
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
+  border-bottom: 1px solid #121212;
+  margin: 0;
+  padding: 0 10rem;
 `;
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 20px;
   font-size: 1.3rem;
+  margin-top: 2rem;
+  padding-bottom: 5rem;
 `;
 
 const RenderComponent = styled.div`
-  padding: 25px;
-  display: flex;
-  align-items: center;
+  margin-top: -20rem;
+  margin-bottom: 5rem;
 `;
 
 const Documentation = styled.table``;

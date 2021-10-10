@@ -1,44 +1,46 @@
-import React from "react";
-import styled from "styled-components";
+import { Component } from 'react';
+
+import Tabs  from "../components/generic/Tabs/Tabs";
+import Panel from "../components/generic/Panel/Panel";
 
 import Stopwatch from "../components/timers/Stopwatch";
 import Countdown from "../components/timers/Countdown";
 import XY from "../components/timers/XY";
 import Tabata from "../components/timers/Tabata";
+import * as utils from '../utils/helpers.js';
 
-const Timers = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+class TimersView extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state  = {
+      selectedTimer: "Stopwatch"
+    }
+  }
 
-const Timer = styled.div`
-  border: 1px solid gray;
-  padding: 20px;
-  margin: 10px;
-  font-size: 1.5rem;
-`;
+  handleChange =  (v) => {
+    this.setState({selectedTimer: v});
+  }
 
-const TimerTitle = styled.div``;
+  render() {
+    const timers = [
+      { title: "Stopwatch", C: <Stopwatch /> },
+      { title: "Countdown", C: <Countdown /> },
+      { title: "XY", C: <XY /> },
+      { title: "Tabata", C: <Tabata /> },
+    ];
 
-function App() {
-  const timers = [
-    { title: "Stopwatch", C: <Stopwatch /> },
-    { title: "Countdown", C: <Countdown /> },
-    { title: "XY", C: <XY /> },
-    { title: "Tabata", C: <Tabata /> },
-  ];
-
-  return (
-    <Timers>
-      {timers.map((timer, index) => (
-        <Timer key={index}>
-          <TimerTitle>{timer.title}</TimerTitle>
-          {timer.C}
-        </Timer>
-      ))}
-    </Timers>
-  );
+    return (
+      <>
+        <Tabs tabItems={utils.readCollection(timers, 'title')} 
+              onChange={this.handleChange} />
+        <Panel id="timer_panel">
+          {utils.getTimer(this.state.selectedTimer, timers)}
+        </Panel>
+      </>
+  
+    );
+  }
 }
 
-export default App;
+export default TimersView;
