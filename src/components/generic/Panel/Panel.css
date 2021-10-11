@@ -27,12 +27,16 @@
     justify-content: space-evenly;
     flex-direction: column;
     transform-style: preserve-3d;
-    --webkit-transform-style: preserve-3d;
-
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
 }
 
 .panel_inner.is-flipped {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
 }
 
 .panel h1 {

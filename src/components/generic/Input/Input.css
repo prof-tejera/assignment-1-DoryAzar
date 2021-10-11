@@ -30,24 +30,23 @@ input {
     font-size: var(--medium_text);
     padding-left: 1.4rem;
     box-shadow: inset 0.2rem 0.2rem 0.5rem var(--bgLight-2), inset -0.2rem -0.2rem 0.5rem var(--tint);
+    -webkit-box-shadow: inset 0.2rem 0.2rem 0.5rem var(--bgLight-2), inset -0.2rem -0.2rem 0.5rem var(--tint);
+    -ms-box-shadow: inset 0.2rem 0.2rem 0.5rem var(--bgLight-2), inset -0.2rem -0.2rem 0.5rem var(--tint);
+    -moz-box-shadow: inset 0.2rem 0.2rem 0.5rem var(--bgLight-2), inset -0.2rem -0.2rem 0.5rem var(--tint);
     background: none;
     color: var(--textDark);
 }
 
-input::-moz-placeholder {
-    color: var(--textLight);
-}
-input:-ms-input-placeholder {
-    color: var(--textLight);
-}
-
-input::placeholder {
+input::placeholder, input::-moz-placeholder, input::-webkit-placeholder, input:-ms-input-placeholder{
     color: var(--textLight);
 }
 
 input:focus {
     outline: none;
     box-shadow: 0.3rem 0.3rem 0.6rem var(--bgLight-2), -0.2rem -0.2rem 0.5rem var(--tint);
+    -webkit-box-shadow: 0.3rem 0.3rem 0.6rem var(--bgLight-2), -0.2rem -0.2rem 0.5rem var(--tint);
+    -ms-box-shadow: 0.3rem 0.3rem 0.6rem var(--bgLight-2), -0.2rem -0.2rem 0.5rem var(--tint);
+    -moz-box-shadow: 0.3rem 0.3rem 0.6rem var(--bgLight-2), -0.2rem -0.2rem 0.5rem var(--tint);
 }
 
 .settings-label {
