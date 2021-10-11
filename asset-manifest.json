@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/assignment-1-DoryAzar/static/css/main.c46d51e3.chunk.css",
+    "main.css": "/assignment-1-DoryAzar/static/css/main.865ff9c1.chunk.css",
     "main.js": "/assignment-1-DoryAzar/static/js/main.f5f3884a.chunk.js",
     "main.js.map": "/assignment-1-DoryAzar/static/js/main.f5f3884a.chunk.js.map",
     "runtime-main.js": "/assignment-1-DoryAzar/static/js/runtime-main.e6689a48.js",
@@ -8,13 +8,13 @@
     "static/js/2.b6b40e2e.chunk.js": "/assignment-1-DoryAzar/static/js/2.b6b40e2e.chunk.js",
     "static/js/2.b6b40e2e.chunk.js.map": "/assignment-1-DoryAzar/static/js/2.b6b40e2e.chunk.js.map",
     "index.html": "/assignment-1-DoryAzar/index.html",
-    "static/css/main.c46d51e3.chunk.css.map": "/assignment-1-DoryAzar/static/css/main.c46d51e3.chunk.css.map",
+    "static/css/main.865ff9c1.chunk.css.map": "/assignment-1-DoryAzar/static/css/main.865ff9c1.chunk.css.map",
     "static/js/2.b6b40e2e.chunk.js.LICENSE.txt": "/assignment-1-DoryAzar/static/js/2.b6b40e2e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e6689a48.js",
     "static/js/2.b6b40e2e.chunk.js",
-    "static/css/main.c46d51e3.chunk.css",
+    "static/css/main.865ff9c1.chunk.css",
     "static/js/main.f5f3884a.chunk.js"
   ]
 }
