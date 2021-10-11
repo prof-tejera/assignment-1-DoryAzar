@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import styled from "styled-components";
-
 import DocumentComponent from "../components/documentation/DocumentComponent";
 import Display from "../components/generic/Display/Display";
 import Button from "../components/generic/Button/Button";
@@ -36,25 +35,25 @@ class Documentation extends Component {
                 prop: "settings",
                 description: "Collection that defines the allowed settings for a timer",
                 type: "array of objects - [{label: 'label1', value: 'value1', placeholder: 'placeholder1'}, {...}]",
-                defaultValue: "[]",
+                defaultValue: "Optional. Default: []",
               },
               {
                 prop: "statusMessage",
                 description: "Status message that can be used for rounds/rest",
                 type: "string",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               },
               {
                 prop: "startTime",
                 description: "Starting time for the timer",
                 type: "string",
-                defaultValue: "00:00:00",
+                defaultValue: "Optional. Default: 00:00:00",
               },
               {
                 prop: "onChange",
-                description: "Optional event handler for capturing values input on change",
+                description: "Event handler for capturing values input on change",
                 type: "func",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               }
 
             ]}
@@ -68,19 +67,19 @@ class Documentation extends Component {
                 prop: "isStarted",
                 description: "Animates the circular display",
                 type: "bool",
-                defaultValue: "false",
+                defaultValue: "Optional. Default: false",
               },
               {
                 prop: "status",
                 description: "Status message that can be used for rounds/rest",
                 type: "string",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               },
               {
                 prop: "value",
                 description: "Value to be displayed",
                 type: "string",
-                defaultValue: "00:00:00",
+                defaultValue: "Optional. Default: 00:00:00",
               }
             ]}
           />    
@@ -93,43 +92,43 @@ class Documentation extends Component {
                 prop: "id",
                 description: "Identifier for the button",
                 type: "string",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               },
               {
                 prop: "value",
                 description: "Identifier for the action useful to identify the event",
                 type: "string",
-                defaultValue: ""
+                defaultValue: "Optional. Default: None"
               },
               {
                 prop: "isIconButton",
                 description: "Creates an icon button",
                 type: "boolean",
-                defaultValue: "false"
+                defaultValue: "Optional. Default: false"
               },
               {
                 prop: "iconName",
                 description: "Name of the icon taken from ion icons. Applicable only when isIconButton is true",
                 type: "string",
-                defaultValue: ""
+                defaultValue: "Optional. Default: None"
               },
               {
                 prop: "iconVisible",
                 description: "Sets the visibility of the icon in an Icon Button. Applicable only when isIconButton is true",
                 type: "bool",
-                defaultValue: "true"
+                defaultValue: "Optional. Default: true"
               },
               {
                 prop: "classifiers",
                 description: "CSS classes to append additional styles",
                 type:  "string",
-                defaultValue:  "btn_primary for text buttons. Possible values for icon buttons: primary, secondary"
+                defaultValue:  "Optional. Default: 'btn_primary' for text buttons. Possible values for icon buttons: 'primary', 'secondary'"
               },
               {
                 prop: "onClick",
                 description: "Event handler for clicking on a button",
                 type:  "function",
-                defaultValue:  "Required. No default"
+                defaultValue:  "Required. Default: None"
               },
             ]}
           />
@@ -149,43 +148,43 @@ class Documentation extends Component {
                 prop: "id",
                 description: "Identifier for the button",
                 type: "string",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               },
               {
                 prop: "value",
                 description: "Identifier for the action useful to identify the event",
                 type: "string",
-                defaultValue: ""
+                defaultValue: "Optional. Default: None"
               },
               {
                 prop: "isIconButton",
                 description: "Creates an icon button",
                 type: "boolean",
-                defaultValue: "false"
+                defaultValue: "Optional. Default: false"
               },
               {
                 prop: "iconName",
                 description: "Name of the icon taken from ion icons. Applicable only when isIconButton is true",
                 type: "string",
-                defaultValue: ""
+                defaultValue: "Optional. Default: None"
               },
               {
                 prop: "iconVisible",
                 description: "Sets the visibility of the icon in an Icon Button. Applicable only when isIconButton is true",
                 type: "bool",
-                defaultValue: "true"
+                defaultValue: "Optional. Default: true"
               },
               {
                 prop: "classifiers",
                 description: "CSS classes to append additional styles",
                 type:  "string",
-                defaultValue:  "btn_primary for text buttons. Possible values for icon buttons: primary, secondary"
+                defaultValue:  "Optional. Default: 'btn_primary' for text buttons. Possible values for icon buttons: 'primary', 'secondary'"
               },
               {
                 prop: "onClick",
                 description: "Event handler for clicking on a button",
                 type:  "function",
-                defaultValue:  "Required. No default"
+                defaultValue:  "Required. Default: None"
               },
             ]}
           />
@@ -195,16 +194,16 @@ class Documentation extends Component {
             component={<Tabs tabItems={["Tab 1", "Tab 2", "Tab 3", "Tab 4"]} />}
             propDocs={[
               {
-                prop: "isStarted",
-                description: "Animates the circular display",
-                type: "bool",
-                defaultValue: "false",
+                prop: "tabItems",
+                description: "Array of tab labels. Max 4 tabs. If more, the control will not render",
+                type: "Array of strings",
+                defaultValue: "Optional. Default: []",
               },
               {
                 prop: "onChange",
-                description: "Optional event handler for capturing the selected tab",
+                description: "Event handler for capturing the selected tab",
                 type: "func",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               }
             ]}
           />    
@@ -228,7 +227,7 @@ class Documentation extends Component {
                 description: `Card container that flips using css. 
                 Two Cards (front and back) need to be defined in order for flipping to work`,
                 type: "string",
-                defaultValue: "Possible values: front |  back. Default: front",
+                defaultValue: "Optional. Default: 'front'. Possible values: 'front' |  'back'",
               },
               {
                 prop: "Children Nodes",
@@ -237,7 +236,7 @@ class Documentation extends Component {
                 The event handler should query the id of Panel container and apply toggle('is-flipped') to
                 the queried element`,
                 type: "node",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               }
             ]}
           /> 
@@ -250,16 +249,29 @@ class Documentation extends Component {
                 prop: "id",
                 description: "Identifier for the panel that will allow flipping the cards",
                 type: "string",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               },
               {
                 prop: "Children Nodes",
                 description: "Accepts any React and HTML valid nodes",
                 type: "node",
-                defaultValue: "",
+                defaultValue: "Optional. Default: None",
               }
             ]}
-          />       
+          />
+
+          <DocumentComponent
+            title="Container "
+            component="Generic Empty Container"
+            propDocs={[
+              {
+                prop: "Children Nodes",
+                description: "Accepts any React and HTML valid nodes",
+                type: "node",
+                defaultValue: "Optional. Default: None",
+              }
+            ]}
+          />           
 
 
         </>

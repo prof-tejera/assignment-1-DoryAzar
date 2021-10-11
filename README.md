@@ -1,5 +1,19 @@
 # Assignment 1
 
+## Submission & Inspiration
+
+[Visit Neumorphic Timers](https://prof-tejera.github.io/assignment-1-DoryAzar/)
+
+We decided for this design to revisit a novel and modern approach to Skeumorphism. This new trend - called Neumorphism - started in 2020 and aims to add more depth and morer layering to the contemporary flat design.
+
+Here are some of the references that inspired this work:
++ [Neumorphism and CSS](https://css-tricks.com/neumorphism-and-css/)
++ [Neumorphism in CSS with just two variables](https://dev.to/aritik/neumorphism-in-css-with-just-two-variables-2p30)
++ [Neumorphism Tool](https://neumorphism.io)
++ [Neumorphism in user interfaces](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6)
++ [Neumorphism: why it's all the hype in UI design](https://www.justinmind.com/blog/neumorphism-ui/)
++ [Neumorphism the right way -  A 2020 Design Trend](https://artofofiare.medium.com/neumorphism-the-right-way-a-2020-design-trend-386e6a09040a)
+
 ## Objective
 
 For Assignment 1 (A1) we are going to be building a component libary that we can use for future assignments. Our main goal is to layout the components that will be composed together to create our final bigger components. We will focus on composition, component interfaces, and styling. We aren't going to focus on functionality quite yet and at first our components will be very static.
