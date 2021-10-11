@@ -1,59 +1,78 @@
-import React from "react";
+import { Component } from "react";
 import styled from "styled-components";
-import Container from "../generic/Container/Container";
 
-const Wrapper = styled.div`
-  border-bottom: 1px solid #121212;
-  margin: 0;
-  padding: 0 10rem;
+
+const Section = styled.div`
+  width: 90%;
+  margin: 2rem;
+  min-width: 35rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
 `;
+
+const Article = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem var(--bgLight-2), -0.2rem -0.2rem 1.8rem var(--tint);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 3rem;
+`;
+
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
   font-size: 1.3rem;
-  margin-top: 2rem;
-  padding-bottom: 5rem;
 `;
 
 const RenderComponent = styled.div`
-  margin-top: -20rem;
-  margin-bottom: 5rem;
+  margin: 3rem 0;
 `;
 
 const Documentation = styled.table``;
 
-class DocumentComponent extends React.Component {
+class DocumentComponent extends Component {
   render() {
     return (
-      <Wrapper>
-        <Title>{this.props.title}</Title>
-        <Container>
-          <RenderComponent>{this.props.component}</RenderComponent>
-          <Documentation>
-            <tbody>
-            <tr key={1}>
-              <th>Prop</th>
-              <th>Description</th>
-              <th>Type</th>
-              <th>Default value</th>
-            </tr>
-            {this.props.propDocs.map((doc, index) => {
-              return (
-                <tr key={index}>
-                  <td>{doc.prop}</td>
-                  <td>{doc.description}</td>
-                  <td>{doc.type}</td>
-                  <td>
-                    <code>{doc.defaultValue}</code>
-                  </td>
-                </tr>
-              );
-            })}
-            </tbody>
-          </Documentation>
-        </Container>
-      </Wrapper>
+      <Section>
+          <Article>
+            <Title>{this.props.title}</Title>
+            <RenderComponent>{this.props.component}</RenderComponent>
+            <Documentation>
+              <tbody>
+              <tr key={1}>
+                <th>Prop</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Default value</th>
+              </tr>
+              {this.props.propDocs.map((doc, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{doc.prop}</td>
+                    <td>{doc.description}</td>
+                    <td>{doc.type}</td>
+                    <td>
+                      <code>{doc.defaultValue}</code>
+                    </td>
+                  </tr>
+                );
+              })}
+              </tbody>
+            </Documentation>
+        </Article>
+      </Section>
     );
   }
 }

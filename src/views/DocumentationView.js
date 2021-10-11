@@ -10,12 +10,6 @@ import Panel from "../components/generic/Panel/Panel";
 import Timer from "../components/generic/Timer";
 
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`;
-
 const Title = styled.div`
   font-size: 2rem;
 `;
@@ -29,8 +23,8 @@ class Documentation extends Component {
 
   render() {
     return (
-      <Container>
-        <div>
+      // <Container>
+        <>
           <Title>Documentation</Title>
 
 
@@ -268,8 +262,8 @@ class Documentation extends Component {
           />       
 
 
-        </div>
-      </Container>
+        </>
+      // </Container>
     );
   }
 }

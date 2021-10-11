@@ -15,17 +15,20 @@
 }
 
 .panel_inner {
+    overflow: visible !important;
     width: 100%;
     height: 100%;
     border-radius: 3rem;
     box-shadow: 0.8rem 0.8rem 1.4rem var(--bgLight-2), -0.2rem -0.2rem 1.8rem var(--tint);
     transition: transform 1s;
-    transform-style: preserve-3d;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    transform-style: preserve-3d;
+    --webkit-transform-style: preserve-3d;
+
 }
 
 .panel_inner.is-flipped {

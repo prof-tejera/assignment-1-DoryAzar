@@ -7,29 +7,29 @@ import TimersView from "./views/TimersView";
 
 function App() {
   return (
-    <Container>
       <Router>
-      <nav>
-          <ul>
-            <li key={1}>
-              <Link to="/">Timers</Link>
-            </li>
-            <li key={2}>
-              <Link to="/docs">Documentation</Link>
-            </li>
-          </ul>
-        </nav>
-        <br />
-      <Switch>
-          <Route path="/docs">
-            <DocumentationView />
-          </Route>
-          <Route path="/">
-            <TimersView />
-          </Route>
-        </Switch>
+        <nav className="navigation">
+            <ul>
+              <li key={1}>
+                <Link to="/">Timers</Link>
+              </li>
+              <li key={2}>
+                <Link to="/docs">Documentation</Link>
+              </li>
+            </ul>
+          </nav>
+          <br />
+        <Container>
+          <Switch>
+              <Route path="/docs">
+                <DocumentationView />
+              </Route>
+              <Route path="/">
+                <TimersView />
+              </Route>
+            </Switch>
+        </Container>
       </Router>
-    </Container>
   );
 }
 
