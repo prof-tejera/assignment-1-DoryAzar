@@ -11,6 +11,7 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  margin-bottom: 10rem;
 
 `;
 
@@ -26,18 +27,18 @@ const Article = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 3rem;
+  padding: 2rem;
 `;
 
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
 `;
 
 const RenderComponent = styled.div`
-  margin: 3rem 0;
+  margin: 4rem 0;
 `;
 
 const Documentation = styled.table``;
@@ -46,32 +47,32 @@ class DocumentComponent extends Component {
   render() {
     return (
       <Section>
-          <Article>
             <Title>{this.props.title}</Title>
             <RenderComponent>{this.props.component}</RenderComponent>
-            <Documentation>
-              <tbody>
-              <tr key={1}>
-                <th>Prop</th>
-                <th>Description</th>
-                <th>Type</th>
-                <th>Default value</th>
-              </tr>
-              {this.props.propDocs.map((doc, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{doc.prop}</td>
-                    <td>{doc.description}</td>
-                    <td>{doc.type}</td>
-                    <td>
-                      <code>{doc.defaultValue}</code>
-                    </td>
-                  </tr>
-                );
-              })}
-              </tbody>
-            </Documentation>
-        </Article>
+            <Article>
+              <Documentation>
+                <tbody>
+                <tr key={1}>
+                  <th>Prop</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Default value</th>
+                </tr>
+                {this.props.propDocs.map((doc, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{doc.prop}</td>
+                      <td>{doc.description}</td>
+                      <td>{doc.type}</td>
+                      <td>
+                        <code>{doc.defaultValue}</code>
+                      </td>
+                    </tr>
+                  );
+                })}
+                </tbody>
+              </Documentation>
+            </Article>
       </Section>
     );
   }

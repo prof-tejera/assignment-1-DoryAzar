@@ -51,11 +51,25 @@ code {
     monospace;
 }
 
-td,
+table  {
+    border: 1px solid var(--bgLight-2);
+}
+tr  {
+    border: none;
+}
+td,td:last-child,
 th {
-  border: 1px solid #dddddd;
+  border: none;
   text-align: left;
   padding: 8px;
+}
+
+th {
+    border-bottom: 1px solid  var(--bgLight-2);
+}
+
+td {
+    border-right: 1px solid  var(--bgLight-2);
 }
 
 /* GENERIC CLASSES */

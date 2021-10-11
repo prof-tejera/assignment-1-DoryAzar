@@ -22,7 +22,6 @@ class Documentation extends Component {
 
   render() {
     return (
-      // <Container>
         <>
           <Title>Documentation</Title>
 
@@ -275,7 +274,6 @@ class Documentation extends Component {
 
 
         </>
-      // </Container>
     );
   }
 }
