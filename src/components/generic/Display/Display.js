@@ -15,7 +15,7 @@ class Display extends Component {
             <div className="display_circular">
                 <div className="marker">
                     { status && <p className="header">{ status }</p>}
-                    <p className="value">{ value }</p>
+                    <p className="value neonText">{ value }</p>
                 </div>
             
                 { 
