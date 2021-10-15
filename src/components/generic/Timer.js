@@ -20,13 +20,21 @@ class Timer extends Component {
 
   // Toggle the counter and hand-off to parent timer
   toggleCount = (e) => {
-    this.setState({timerCounting: !this.state.timerCounting});
+    this.setState(({ timerCounting }) => {
+      return {
+        timerCounting: !timerCounting
+      };
+    });
     if (this.props.onChange) this.props.onChange(e);
   } 
 
   // Flips the card to display settings
   flipSide = () => {
-    this.setState({isFrontSide: !this.state.isFrontSide});
+    this.setState(({ isFrontSide }) => {
+      return {
+        isFrontSide: !isFrontSide
+      };
+    });
     const card = document.querySelector("#timer_panel");
     if (card) card.classList.toggle('is-flipped');
   }
@@ -38,7 +46,11 @@ class Timer extends Component {
 
   // Reset the counter
   reset = (e) => {
-    this.setState({counter: this.props.startTime || "00:00:00"});
+    this.setState(() => {
+      return {
+        counter: this.props.startTime || "00:00:00"
+      };
+    });
     console.log("reset");
   }
 

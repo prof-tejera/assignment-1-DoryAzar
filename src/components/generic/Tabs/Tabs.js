@@ -14,7 +14,11 @@ class Tabs extends Component {
 
     handleChange =  (e) => {
         const value = e.target.value || this.state.tabSelected;
-        this.setState({tabSelected: value });
+        this.setState(() => { 
+            return {
+                tabSelected: value
+            }
+        });
         if (this.props.onChange) this.props.onChange(e.target.value);
     }
     
