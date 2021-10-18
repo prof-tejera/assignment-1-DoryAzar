@@ -3,6 +3,7 @@ import styled from "styled-components";
 import DocumentComponent from "../components/documentation/DocumentComponent";
 import Display from "../components/generic/Display/Display";
 import Button from "../components/generic/Button/Button";
+import Input from "../components/generic/Input/Input";
 import Tabs from "../components/generic/Tabs/Tabs";
 import Card from "../components/generic/Card/Card";
 import Panel from "../components/generic/Panel/Panel";
@@ -51,7 +52,7 @@ class Documentation extends Component {
               {
                 prop: "onChange",
                 description: "Event handler for capturing values input on change",
-                type: "func",
+                type: "function",
                 defaultValue: "Optional. Default: None",
               }
 
@@ -189,6 +190,39 @@ class Documentation extends Component {
           />
 
           <DocumentComponent
+            title="Input "
+            component={<Input label="Test Label" />}
+            propDocs={[
+              {
+                prop: "label",
+                description: "Label of the input field",
+                type: "String",
+                defaultValue: "Required. Default: None",
+              },
+              {
+                prop: "value",
+                description: "Initial value passed to the input",
+                type: "String",
+                defaultValue: "Optional. Default: None",
+              },
+              {
+                prop: "placeholder",
+                description: "Input placeholder text",
+                type: "String",
+                defaultValue: "Optional. Default: None",
+              },
+              {
+                prop: "onChange",
+                description: "Event handler for capturing keyboard inputs",
+                type:  "function",
+                defaultValue:  "Optional. Default: None"
+              }
+
+
+            ]}
+          />    
+
+          <DocumentComponent
             title="Tabs "
             component={<Tabs tabItems={["Tab 1", "Tab 2", "Tab 3", "Tab 4"]} />}
             propDocs={[
@@ -201,7 +235,7 @@ class Documentation extends Component {
               {
                 prop: "onChange",
                 description: "Event handler for capturing the selected tab",
-                type: "func",
+                type: "function",
                 defaultValue: "Optional. Default: None",
               }
             ]}
