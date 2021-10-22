@@ -8,7 +8,7 @@ class Tabata extends Component {
       {label: "Rest Time", value:"00:10:00", placeholder: "Timer will rest for that duration"},
       {label: "Rounds", value:"2", placeholder: "Stops after that many rounds"}
     ]
-    return <Timer statusMessage="Round 1 of 2  - Work" startTime="00:45:00" settings={settings} />;
+    return <Timer statusMessage="Work - Round 1 of 2" startTime="00:45:00" settings={settings} />;
   }
 }
 

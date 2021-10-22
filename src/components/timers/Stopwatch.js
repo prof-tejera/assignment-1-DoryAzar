@@ -7,7 +7,7 @@ class StopWatch extends Component {
       {label: "Start Time", value: "00:00:00", placeholder: "Start the timer at this time"},
       {label: "Stop Time", value: "00:30:00", placeholder: "Stop the timer at this time"}
     ]
-    return <Timer settings={settings} />;
+    return <Timer statusMessage="Count to 00:30:00" settings={settings} />;
   }
 }
 
