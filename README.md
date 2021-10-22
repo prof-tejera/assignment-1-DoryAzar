@@ -4,7 +4,7 @@
 
 [Visit Neumorphic Timers](https://prof-tejera.github.io/assignment-1-DoryAzar/)
 
-We decided for this design to revisit a novel and modern approach to Skeumorphism. This new trend - called Neumorphism - started in 2020 and aims to add more depth and morer layering to the contemporary flat design.
+We decided for this design to revisit a novel and modern approach to Skeumorphism. This new trend - called Neumorphism - started in 2020 and aims to add more depth and more layering to the contemporary flat design.
 
 Here are some of the references that inspired this work:
 + [Neumorphism and CSS](https://css-tricks.com/neumorphism-and-css/)
